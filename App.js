@@ -59,11 +59,7 @@ export default () => {
             setBottomActions(ev.nativeEvent.layout)
           }}
           style={[
-            styles.bottomActions,
-            {
-              // backgroundColor: 'red',
-              // marginBottom: 30,
-            },
+            styles.bottomActions,           
           ]}
         />
         <View>
@@ -96,11 +92,10 @@ export default () => {
               left: 0,
               right: 0,
               paddingHorizontal: 20,
-
               transform: [
                 {
                   translateY: scrollY.interpolate({
-                    inputRange, //[-1, 0, topEdge - 80, topEdge, topEdge + 1]
+                    inputRange, 
                     outputRange: [0, 0, 0, 0, -1],
                   }),
                 },
